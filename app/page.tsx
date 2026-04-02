@@ -1,65 +1,110 @@
-import Image from "next/image";
+import { Navbar } from "@/components/navigation/Navbar";
+import { HeroParticles } from "@/components/sections/HeroParticles";
+import { Marquee } from "@/components/sections/Marquee";
+import { About } from "@/components/sections/About";
+import { DMInfo } from "@/components/sections/DMInfo";
+import { CampaignLife } from "@/components/sections/CampaignLife";
+import { Services } from "@/components/sections/Services";
+import { Process } from "@/components/sections/Process";
+import { Blog } from "@/components/sections/Blog";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/navigation/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen relative flex items-center overflow-hidden px-[5%] pt-[100px] pb-[100px]">
+        {/* Background Effects */}
+        <div className="absolute inset-0 hero-mesh"></div>
+        <div className="absolute inset-0 hero-grid"></div>
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-[-10%] right-[5%] orb orb1"></div>
+        <div className="absolute bottom-[10%] left-[0%] orb orb2"></div>
+        <div className="absolute bottom-[30%] right-[30%] orb orb3"></div>
+        
+        {/* Particles Canvas */}
+        <HeroParticles />
+        
+        <div className="relative z-10 hero-content">
+          {/* Badge */}
+          <div className="hero-badge">
+            <div className="dot"></div>
+            Premium Digital Marketing Agency
+          </div>
+          
+          <h1 className="hero-title">
+            <span className="solid">TURN ATTENTION</span><br/>
+            <span className="outline">INTO TRUST.</span><br/>
+            <span className="gf">TURN TRAFFIC INTO <br className="hidden md:block" /> CLIENTS.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-sub">
+            DigiTechLeads helps ambitious brands grow with premium strategy, paid media, high-converting websites, compelling content, and conversion-focused campaigns built to create stronger demand and more qualified enquiries.
           </p>
+          
+          {/* Buttons */}
+          <div className="hero-btns">
+            <a
+              href="#contact"
+              className="btn-gold"
+            >
+              Book a Free Strategy Call →
+            </a>
+            <a
+              href="#services"
+              className="btn-ghost"
+            >
+              Explore Services
+            </a>
+          </div>
+
+          <div className="hero-chip-row">
+            <span className="hero-chip">Performance Marketing</span>
+            <span className="hero-chip">Lead Generation</span>
+            <span className="hero-chip">Google Ads</span>
+            <span className="hero-chip">Conversion Optimization</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        {/* Scroll Hint */}
+        <div className="scroll-hint">
+          <span>Scroll</span>
+          <div className="scroll-line"></div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Services Ticker */}
+      <section className="relative z-20">
+        <Marquee />
+      </section>
+
+      {/* About Section */}
+      <About />
+
+      {/* Growth Engine Section */}
+      <DMInfo />
+
+      {/* Campaign Lifecycle Section */}
+      <CampaignLife />
+
+      {/* Services Section */}
+      <Services />
+
+      {/* Process Section */}
+      <Process />
+
+      {/* Blog Section */}
+      <Blog />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer Section */}
+      <Footer />
+      
+    </main>
   );
 }

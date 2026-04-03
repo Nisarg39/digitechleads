@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Contact() {
   return (
@@ -58,21 +59,36 @@ export function Contact() {
 
             <div className="contact-items">
               <div className="citem group">
-                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">📧</div>
+                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 scale-150 rounded-full bg-sky-500/10 blur-lg group-hover:bg-sky-500/20 transition-all duration-500" />
+                    <Mail size={18} strokeWidth={2} className="text-sky-400 relative z-10" />
+                  </div>
+                </div>
                 <div>
                   <h4>Email Us</h4>
                   <p><a href="mailto:Info@digitechleads.com" style={{ color: "inherit", textDecoration: "none" }}>Info@digitechleads.com</a></p>
                 </div>
               </div>
               <div className="citem group">
-                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">📞</div>
+                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-lg group-hover:bg-emerald-500/20 transition-all duration-500" />
+                    <Phone size={18} strokeWidth={2} className="text-emerald-400 relative z-10" />
+                  </div>
+                </div>
                 <div>
                   <h4>Call Us</h4>
                   <p>+91 7774890567</p>
                 </div>
               </div>
               <div className="citem group">
-                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">📍</div>
+                <div className="citem-icon group-hover:bg-[rgba(245,166,35,0.15)] group-hover:border-[rgba(245,166,35,0.4)] transition-all">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-lg group-hover:bg-rose-500/20 transition-all duration-500" />
+                    <MapPin size={18} strokeWidth={2} className="text-rose-400 relative z-10" />
+                  </div>
+                </div>
                 <div>
                   <h4>Office</h4>
                   <p>Wanwadi - 411040</p>

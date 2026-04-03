@@ -1,25 +1,45 @@
 "use client";
 
-import React from "react";
+import { Telescope, Map, Rocket, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: "🔭",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-blue-500/10 blur-lg group-hover:bg-blue-500/20 transition-all duration-500" />
+        <Telescope size={26} strokeWidth={1.5} className="text-blue-400 relative z-10" />
+      </div>
+    ),
     title: "Discovery",
     description: "Deep dive into your brand, goals, competitors and audience to build a strategic foundation.",
   },
   {
-    icon: "🗺️",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-gold/10 blur-lg group-hover:bg-gold/20 transition-all duration-500" />
+        <Map size={26} strokeWidth={1.5} className="text-gold relative z-10" />
+      </div>
+    ),
     title: "Strategy",
     description: "Custom data-driven marketing plan tailored precisely to your business objectives and budget.",
   },
   {
-    icon: "🚀",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-lg group-hover:bg-rose-500/20 transition-all duration-500" />
+        <Rocket size={26} strokeWidth={1.5} className="text-rose-400 relative z-10" />
+      </div>
+    ),
     title: "Execute",
     description: "Expert team launches campaigns with precision — creative, targeting and messaging all aligned.",
   },
   {
-    icon: "📈",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-lg group-hover:bg-emerald-500/20 transition-all duration-500" />
+        <TrendingUp size={26} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
+      </div>
+    ),
     title: "Optimize",
     description: "Continuously analyze, test and refine every element to maximize performance and ensure growth.",
   },

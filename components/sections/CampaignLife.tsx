@@ -1,28 +1,49 @@
 "use client";
 
 import React from "react";
+import { Users, PenTool, Rocket, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: "🎯",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-500" />
+        <Users size={28} strokeWidth={1.5} className="text-blue-400 relative z-10" />
+      </div>
+    ),
     title: "Audience Research & Segmentation",
     description: "We map your ideal customer — demographics, intent signals, platform behaviour — and build precise targeting segments before spending a single rupee.",
     tags: ["Persona Mapping", "Intent Analysis", "Competitor Research"],
   },
   {
-    icon: "✍️",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-gold/10 blur-xl group-hover:bg-gold/20 transition-all duration-500" />
+        <PenTool size={28} strokeWidth={1.5} className="text-gold relative z-10" />
+      </div>
+    ),
     title: "Creative Strategy & Ad Copy",
     description: "Headlines, visuals and hooks are engineered to stop the scroll — tested across multiple variants from day one to find what resonates fastest.",
     tags: ["A/B Testing", "Hook Frameworks", "Visual Design"],
   },
   {
-    icon: "🚀",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-xl group-hover:bg-rose-500/20 transition-all duration-500" />
+        <Rocket size={28} strokeWidth={1.5} className="text-rose-400 relative z-10" />
+      </div>
+    ),
     title: "Launch & Real-Time Monitoring",
     description: "Campaigns go live with full tracking in place — every click, impression and conversion is captured so we have data from the very first hour.",
     tags: ["GA4 Setup", "Pixel Tracking", "Conversion Events"],
   },
   {
-    icon: "📊",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-xl group-hover:bg-emerald-500/20 transition-all duration-500" />
+        <TrendingUp size={28} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
+      </div>
+    ),
     title: "Optimization & Scaling",
     description: "We analyze performance daily, cut what isn't working and double down on what is — continuously improving your cost per lead and return on ad spend.",
     tags: ["Bid Optimization", "ROAS Scaling", "Budget Reallocation"],

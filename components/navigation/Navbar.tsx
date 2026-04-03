@@ -44,8 +44,25 @@ export function Navbar() {
         )}
       >
         {/* Logo */}
-        <Link href="#home" className="flex items-center shrink-0" aria-label="DigiTechLeads home">
-          {/* Logo removed to fix overlapping text issue as requested */}
+        <Link href="#home" className="flex items-center gap-2 shrink-0 group transition-all duration-300 hover:opacity-90 active:scale-95" aria-label="DigiTechLeads home">
+          <div className="relative w-9 h-9 md:w-11 md:h-11">
+            <Image
+              src="/images/digitechleads_icon_transparent.png"
+              alt="DigiTechLeads Icon"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <div className="relative w-36 h-6 md:w-44 md:h-8 hidden sm:block">
+            <Image
+              src="/images/digitechleads_text_transparent.png"
+              alt="DigiTechLeads Text"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation Group */}
@@ -101,6 +118,8 @@ export function Navbar() {
               </li>
             ))}
           </ul>
+        </div>
+
         {/* Mobile Menu Button */}
         <button
           className="flex flex-col gap-[5px] cursor-pointer md:hidden flex-shrink-0"
@@ -111,29 +130,52 @@ export function Navbar() {
           <span className={cn("block h-[2px] w-[22px] bg-gold transition-all duration-300", isMobileMenuOpen && "opacity-0")} />
           <span className={cn("block h-[2px] w-[22px] bg-gold transition-all duration-300", isMobileMenuOpen && "-rotate-45 -translate-y-[7px]")} />
         </button>
-        </div>
       </nav>
 
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed top-[70px] left-0 right-0 z-[999] flex flex-col gap-[1.25rem] bg-[rgba(13,17,23,0.98)] backdrop-blur-[20px] px-[5%] py-8 border-b border-white/5 max-h-[90vh] overflow-y-auto transition-all duration-300",
-          !isMobileMenuOpen && "hidden"
+          "fixed left-0 right-0 bottom-0 z-[990] flex flex-col bg-[rgba(13,17,23,0.98)] backdrop-blur-[20px] px-[8%] py-8 border-t border-white/5 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          scrolled ? "top-[75px]" : "top-[100px]",
+          !isMobileMenuOpen 
+            ? "opacity-0 invisible pointer-events-none -translate-y-8" 
+            : "opacity-100 visible pointer-events-auto translate-y-0"
         )}
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              "block py-2 text-[0.95rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-300",
-              link.isCta ? "text-gold" : "text-white/80 border-b border-white/5 hover:text-gold"
-            )}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {link.label}
-          </Link>
-        ))}
+        <div className="flex flex-col items-center justify-center gap-7 relative z-10 h-full overflow-y-auto pb-12 pt-8 text-center">
+          {navLinks.map((link, i) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "group relative transition-all duration-500",
+                link.isCta 
+                  ? "mt-10 flex items-center justify-center bg-gradient-to-br from-[#F5A623] to-[#FFD700] text-[#0D1117] rounded-[4px] shadow-[0_8px_30px_rgba(245,166,35,0.25)] hover:shadow-[0_12px_45px_rgba(245,166,35,0.4)]" 
+                  : "flex items-center justify-center w-max"
+              )}
+              style={{
+                transitionDelay: isMobileMenuOpen ? `${i * 75}ms` : '0ms',
+                transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                opacity: isMobileMenuOpen ? 1 : 0,
+                ...(link.isCta ? { height: '80px', minWidth: '180px', padding: '0 24px' } : {})
+              }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className={cn(
+                "transition-all duration-300",
+                link.isCta 
+                  ? "text-[1.1rem] font-extrabold uppercase tracking-[0.12em] !text-[#0D1117]" 
+                  : "font-display text-[3.25rem] leading-none tracking-[0.05em] text-white/90 group-hover:text-gold"
+              )}>
+                {link.label}
+              </span>
+            </Link>
+          ))}
+          
+          {/* Ambient Background Effects */}
+          <div className="absolute top-1/4 right-[-10%] w-64 h-64 bg-gold/10 rounded-full blur-[80px] pointer-events-none z-[-1]"></div>
+          <div className="absolute bottom-1/3 left-[-10%] w-48 h-48 bg-blue-500/10 rounded-full blur-[60px] pointer-events-none z-[-1]"></div>
+        </div>
       </div>
     </>
   );

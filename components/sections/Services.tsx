@@ -1,12 +1,31 @@
 "use client";
 
 import React, { useState } from "react";
+import { 
+  Search, 
+  Megaphone, 
+  Share2, 
+  PenTool, 
+  Mail, 
+  Monitor, 
+  BarChart3, 
+  Target, 
+  ShieldCheck, 
+  Video, 
+  Handshake, 
+  Cpu 
+} from "lucide-react";
 
 const services = [
   {
     id: "service-seo",
     num: "01",
-    icon: "🔍",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-indigo-500/10 blur-lg group-hover:bg-indigo-500/20 transition-all duration-500" />
+        <Search size={22} strokeWidth={1.5} className="text-indigo-400 relative z-10" />
+      </div>
+    ),
     title: "Search Engine Optimization (SEO)",
     desc: "Rank higher, win more qualified organic traffic, and build long-term lead generation through on-page SEO, technical SEO and content strategy.",
     benefits: ["Technical SEO", "Content SEO", "Keyword Research"],
@@ -22,7 +41,12 @@ const services = [
   {
     id: "service-ppc",
     num: "02",
-    icon: "📢",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-amber-500/10 blur-lg group-hover:bg-amber-500/20 transition-all duration-500" />
+        <Megaphone size={22} strokeWidth={1.5} className="text-amber-400 relative z-10" />
+      </div>
+    ),
     title: "Search Engine Marketing (SEM) / Pay-Per-Click (PPC)",
     desc: "Targeted Google Ads and paid search campaigns that put your brand in front of high-intent buyers fast.",
     benefits: ["Google Ads", "Retargeting", "Landing Pages"],
@@ -36,7 +60,12 @@ const services = [
   {
     id: "service-smm",
     num: "03",
-    icon: "📱",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-pink-500/10 blur-lg group-hover:bg-pink-500/20 transition-all duration-500" />
+        <Share2 size={22} strokeWidth={1.5} className="text-pink-400 relative z-10" />
+      </div>
+    ),
     title: "Social Media Marketing (SMM)",
     desc: "Build brand authority, engage your audience and convert attention into enquiries with strategic organic and paid social campaigns.",
     benefits: ["Meta Ads", "Creative Strategy", "Lead Forms"],
@@ -51,7 +80,12 @@ const services = [
   {
     id: "service-content",
     num: "04",
-    icon: "✍️",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-gold/10 blur-lg group-hover:bg-gold/20 transition-all duration-500" />
+        <PenTool size={22} strokeWidth={1.5} className="text-gold relative z-10" />
+      </div>
+    ),
     title: "Content Marketing",
     desc: "Compelling content that attracts, educates and converts your ideal audience.",
     benefits: [],
@@ -69,7 +103,12 @@ const services = [
   {
     id: "service-email",
     num: "05",
-    icon: "📧",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-sky-500/10 blur-lg group-hover:bg-sky-500/20 transition-all duration-500" />
+        <Mail size={22} strokeWidth={1.5} className="text-sky-400 relative z-10" />
+      </div>
+    ),
     title: "Email Marketing",
     desc: "Nurture leads, retain customers and drive revenue through smart email campaigns.",
     benefits: [],
@@ -83,7 +122,12 @@ const services = [
   {
     id: "service-web",
     num: "06",
-    icon: "💻",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-cyan-500/10 blur-lg group-hover:bg-cyan-500/20 transition-all duration-500" />
+        <Monitor size={22} strokeWidth={1.5} className="text-cyan-400 relative z-10" />
+      </div>
+    ),
     title: "Website Design & Development",
     desc: "Beautiful, fast, premium websites designed to rank, build trust and turn visitors into sales conversations.",
     benefits: ["Speed", "UX", "Conversion Design"],
@@ -98,7 +142,12 @@ const services = [
   {
     id: "service-analytics",
     num: "07",
-    icon: "📊",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-purple-500/10 blur-lg group-hover:bg-purple-500/20 transition-all duration-500" />
+        <BarChart3 size={22} strokeWidth={1.5} className="text-purple-400 relative z-10" />
+      </div>
+    ),
     title: "Analytics & Reporting",
     desc: "Turn raw data into actionable insights that fuel smarter marketing decisions.",
     benefits: [],
@@ -112,7 +161,12 @@ const services = [
   {
     id: "service-cro",
     num: "08",
-    icon: "🎯",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-lg group-hover:bg-rose-500/20 transition-all duration-500" />
+        <Target size={22} strokeWidth={1.5} className="text-rose-400 relative z-10" />
+      </div>
+    ),
     title: "Conversion Rate Optimization (CRO)",
     desc: "Turn more of your existing traffic into leads and customers through systematic testing.",
     benefits: [],
@@ -125,7 +179,12 @@ const services = [
   {
     id: "service-orm",
     num: "09",
-    icon: "🛡️",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-lg group-hover:bg-emerald-500/20 transition-all duration-500" />
+        <ShieldCheck size={22} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
+      </div>
+    ),
     title: "Online Reputation Management (ORM)",
     desc: "Protect and strengthen your brand's image across the web.",
     benefits: [],
@@ -138,7 +197,12 @@ const services = [
   {
     id: "service-video",
     num: "10",
-    icon: "🎬",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-orange-500/10 blur-lg group-hover:bg-orange-500/20 transition-all duration-500" />
+        <Video size={22} strokeWidth={1.5} className="text-orange-400 relative z-10" />
+      </div>
+    ),
     title: "Video Marketing",
     desc: "High-impact video content that tells your brand story and drives engagement everywhere.",
     benefits: [],
@@ -152,7 +216,12 @@ const services = [
   {
     id: "service-affiliate",
     num: "11",
-    icon: "🤝",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-teal-500/10 blur-lg group-hover:bg-teal-500/20 transition-all duration-500" />
+        <Handshake size={22} strokeWidth={1.5} className="text-teal-400 relative z-10" />
+      </div>
+    ),
     title: "Affiliate Marketing",
     desc: "Build and manage a performance-based partner network that drives sales on autopilot.",
     benefits: [],
@@ -164,7 +233,12 @@ const services = [
   {
     id: "service-automation",
     num: "12",
-    icon: "⚙️",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-slate-500/10 blur-lg group-hover:bg-slate-500/20 transition-all duration-500" />
+        <Cpu size={22} strokeWidth={1.5} className="text-slate-400 relative z-10" />
+      </div>
+    ),
     title: "Marketing Automation",
     desc: "Streamline follow-up, nurture leads and scale conversion with smart marketing automation across your funnel.",
     benefits: ["Email Automation", "CRM Workflows", "Lead Nurture"],

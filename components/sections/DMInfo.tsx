@@ -1,39 +1,115 @@
 "use client";
 
 import React from "react";
+import { 
+  Users, 
+  Radio, 
+  Globe, 
+  Mail, 
+  DollarSign, 
+  Search, 
+  Megaphone, 
+  Share2, 
+  Send 
+} from "lucide-react";
 
 const flowNodes = [
-  { icon: "👥", label: "Target Audience", delay: "0.1s" },
-  { icon: "📡", label: "Marketing Channels", delay: "0.3s" },
-  { icon: "🌐", label: "Your Website", delay: "0.5s" },
-  { icon: "📩", label: "Lead Capture", delay: "0.7s" },
-  { icon: "💰", label: "Revenue Growth", delay: "0.9s" },
+  { 
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-500" />
+        <Users size={32} strokeWidth={1.5} className="text-blue-400 relative z-10" />
+      </div>
+    ), 
+    label: "Target Audience", 
+    delay: "0.1s" 
+  },
+  { 
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-purple-500/10 blur-xl group-hover:bg-purple-500/20 transition-all duration-500" />
+        <Radio size={32} strokeWidth={1.5} className="text-purple-400 relative z-10" />
+      </div>
+    ), 
+    label: "Marketing Channels", 
+    delay: "0.3s" 
+  },
+  { 
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-gold/10 blur-xl group-hover:bg-gold/20 transition-all duration-500" />
+        <Globe size={32} strokeWidth={1.5} className="text-gold relative z-10" />
+      </div>
+    ), 
+    label: "Your Website", 
+    delay: "0.5s" 
+  },
+  { 
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-xl group-hover:bg-rose-500/20 transition-all duration-500" />
+        <Mail size={32} strokeWidth={1.5} className="text-rose-400 relative z-10" />
+      </div>
+    ), 
+    label: "Lead Capture", 
+    delay: "0.7s" 
+  },
+  { 
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-xl group-hover:bg-emerald-500/20 transition-all duration-500" />
+        <DollarSign size={32} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
+      </div>
+    ), 
+    label: "Revenue Growth", 
+    delay: "0.9s" 
+  },
 ];
 
 const channels = [
   {
-    icon: "🔍",
+    icon: (
+      <div className="relative flex items-center justify-center w-max">
+        <div className="absolute inset-0 scale-125 rounded-full bg-indigo-500/10 blur-lg group-hover:bg-indigo-500/20 transition-all duration-500" />
+        <Search size={36} strokeWidth={1.5} className="text-indigo-400 relative z-10" />
+      </div>
+    ),
     name: "SEO — Organic Search",
     percentage: "92%",
     description: "Long-term compounding traffic from Google search rankings — the highest ROI channel.",
     delay: "0.2s",
   },
   {
-    icon: "📢",
+    icon: (
+      <div className="relative flex items-center justify-center w-max">
+        <div className="absolute inset-0 scale-125 rounded-full bg-amber-500/10 blur-lg group-hover:bg-amber-500/20 transition-all duration-500" />
+        <Megaphone size={36} strokeWidth={1.5} className="text-amber-400 relative z-10" />
+      </div>
+    ),
     name: "PPC — Paid Search",
     percentage: "78%",
     description: "Instant visibility for high-intent keywords. Google & Bing Ads with precision targeting.",
     delay: "0.4s",
   },
   {
-    icon: "📱",
+    icon: (
+      <div className="relative flex items-center justify-center w-max">
+        <div className="absolute inset-0 scale-125 rounded-full bg-pink-500/10 blur-lg group-hover:bg-pink-500/20 transition-all duration-500" />
+        <Share2 size={36} strokeWidth={1.5} className="text-pink-400 relative z-10" />
+      </div>
+    ),
     name: "Social Media Ads",
     percentage: "85%",
     description: "Hyper-targeted paid social campaigns on Facebook, Instagram, LinkedIn, and TikTok.",
     delay: "0.6s",
   },
   {
-    icon: "📧",
+    icon: (
+      <div className="relative flex items-center justify-center w-max">
+        <div className="absolute inset-0 scale-125 rounded-full bg-sky-500/10 blur-lg group-hover:bg-sky-500/20 transition-all duration-500" />
+        <Send size={36} strokeWidth={1.5} className="text-sky-400 relative z-10" />
+      </div>
+    ),
     name: "Email Automation",
     percentage: "70%",
     description: "Automated nurture sequences that convert leads into buyers on autopilot.",

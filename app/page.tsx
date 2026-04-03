@@ -68,12 +68,6 @@ export default function HomePage() {
             <span className="hero-chip">Conversion Optimization</span>
           </div>
         </div>
-        
-        {/* Scroll Hint */}
-        <div className="scroll-hint">
-          <span>Scroll</span>
-          <div className="scroll-line"></div>
-        </div>
       </section>
 
       {/* Services Ticker */}

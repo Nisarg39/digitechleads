@@ -2,39 +2,55 @@
 
 import React from "react";
 import Link from "next/link";
+import { TrendingUp, Share2, DollarSign, Calendar, Clock } from "lucide-react";
 
 const blogPosts = [
   {
     href: "#contact",
     gradient: "linear-gradient(135deg,#0d1b3e,#1a3a6e)",
-    icon: "📈",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-indigo-500/20 blur-2xl group-hover:bg-indigo-500/30 transition-all duration-500" />
+        <TrendingUp size={56} strokeWidth={1.5} className="text-indigo-400 relative z-10" />
+      </div>
+    ),
     tag: "SEO",
     title: "10 SEO Strategies That Will Dominate Google in 2025",
     desc: "Discover the most powerful tactics top brands use to rank higher and convert more visitors.",
-    date: "📅 Mar 20, 2025",
-    readTime: "⏱ 6 min",
+    date: "Mar 20, 2025",
+    readTime: "6 min",
     isFeatured: true
   },
   {
     href: "#contact",
     gradient: "linear-gradient(135deg,#2d1500,#5a3000)",
-    icon: "📱",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-pink-500/20 blur-2xl group-hover:bg-pink-500/30 transition-all duration-500" />
+        <Share2 size={56} strokeWidth={1.5} className="text-pink-400 relative z-10" />
+      </div>
+    ),
     tag: "Social Media",
     title: "Build a Winning Instagram Strategy in 2025",
     desc: "Grow your audience with these proven Instagram marketing tactics.",
-    date: "📅 Mar 14, 2025",
-    readTime: "⏱ 4 min",
+    date: "Mar 14, 2025",
+    readTime: "4 min",
     isFeatured: false
   },
   {
     href: "#contact",
     gradient: "linear-gradient(135deg,#0a2810,#1a4a20)",
-    icon: "💰",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/20 blur-2xl group-hover:bg-emerald-500/30 transition-all duration-500" />
+        <DollarSign size={56} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
+      </div>
+    ),
     tag: "Paid Ads",
     title: "Google Ads vs Meta Ads: Which Is Right for You?",
     desc: "A complete comparison to help you choose the best platform for maximum ROI.",
-    date: "📅 Mar 8, 2025",
-    readTime: "⏱ 5 min",
+    date: "Mar 8, 2025",
+    readTime: "5 min",
     isFeatured: false
   }
 ];
@@ -132,8 +148,14 @@ export function Blog() {
                 <h3>{post.title}</h3>
                 <p>{post.desc}</p>
                 <div className="blog-meta">
-                  <span>{post.date}</span>
-                  <span>{post.readTime}</span>
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={14} className="text-gold/60" />
+                    {post.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={14} className="text-gold/60" />
+                    {post.readTime}
+                  </span>
                 </div>
               </div>
             </Link>

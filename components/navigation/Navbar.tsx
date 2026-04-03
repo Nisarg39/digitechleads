@@ -5,6 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { useScrollPosition } from "@/lib/hooks/useScrollPosition";
 import { cn } from "@/lib/utils";
+import { 
+  Search, 
+  Megaphone, 
+  Share2, 
+  PenTool, 
+  Mail, 
+  Monitor, 
+  BarChart3, 
+  Target, 
+  ShieldCheck, 
+  Video, 
+  Handshake, 
+  Cpu 
+} from "lucide-react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -15,18 +29,78 @@ const navLinks = [
 ];
 
 const servicesDropdown = [
-  { href: "#service-seo", icon: "🔍", label: "SEO Optimization" },
-  { href: "#service-ppc", icon: "📢", label: "PPC / Google Ads" },
-  { href: "#service-smm", icon: "📱", label: "Social Media Marketing" },
-  { href: "#service-content", icon: "✍️", label: "Content Marketing" },
-  { href: "#service-email", icon: "📧", label: "Email Marketing" },
-  { href: "#service-web", icon: "💻", label: "Web Design & Dev" },
-  { href: "#service-analytics", icon: "📊", label: "Analytics & Reporting" },
-  { href: "#service-cro", icon: "🎯", label: "CRO" },
-  { href: "#service-orm", icon: "🛡️", label: "Reputation Management" },
-  { href: "#service-video", icon: "🎬", label: "Video Marketing" },
-  { href: "#service-affiliate", icon: "🤝", label: "Affiliate Marketing" },
-  { href: "#service-automation", icon: "⚙️", label: "Marketing Automation" },
+  { 
+    href: "#service-seo", 
+    icon: <Search className="text-indigo-400 group-hover:text-indigo-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-indigo-500/20",
+    label: "SEO Optimization" 
+  },
+  { 
+    href: "#service-ppc", 
+    icon: <Megaphone className="text-amber-400 group-hover:text-amber-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-amber-500/20",
+    label: "PPC / Google Ads" 
+  },
+  { 
+    href: "#service-smm", 
+    icon: <Share2 className="text-pink-400 group-hover:text-pink-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-pink-500/20",
+    label: "Social Media Marketing" 
+  },
+  { 
+    href: "#service-content", 
+    icon: <PenTool className="text-gold group-hover:text-[#FFD700] transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-gold/20",
+    label: "Content Marketing" 
+  },
+  { 
+    href: "#service-email", 
+    icon: <Mail className="text-sky-400 group-hover:text-sky-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-sky-500/20",
+    label: "Email Marketing" 
+  },
+  { 
+    href: "#service-web", 
+    icon: <Monitor className="text-cyan-400 group-hover:text-cyan-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-cyan-500/20",
+    label: "Web Design & Dev" 
+  },
+  { 
+    href: "#service-analytics", 
+    icon: <BarChart3 className="text-purple-400 group-hover:text-purple-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-purple-500/20",
+    label: "Analytics & Reporting" 
+  },
+  { 
+    href: "#service-cro", 
+    icon: <Target className="text-rose-400 group-hover:text-rose-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-rose-500/20",
+    label: "CRO" 
+  },
+  { 
+    href: "#service-orm", 
+    icon: <ShieldCheck className="text-emerald-400 group-hover:text-emerald-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-emerald-500/20",
+    label: "Reputation Management" 
+  },
+  { 
+    href: "#service-video", 
+    icon: <Video className="text-orange-400 group-hover:text-orange-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-orange-500/20",
+    label: "Video Marketing" 
+  },
+  { 
+    href: "#service-affiliate", 
+    icon: <Handshake className="text-teal-400 group-hover:text-teal-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-teal-500/20",
+    label: "Affiliate Marketing" 
+  },
+  { 
+    href: "#service-automation", 
+    icon: <Cpu className="text-slate-400 group-hover:text-slate-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-slate-500/20",
+    label: "Marketing Automation" 
+  },
 ];
 
 export function Navbar() {
@@ -84,17 +158,23 @@ export function Navbar() {
                     </Link>
 
                     {/* Services Dropdown */}
-                    <div className="absolute left-1/2 top-[calc(100%+8px)] z-50 w-[640px] -translate-x-1/2 grid grid-cols-3 gap-[0.4rem] rounded-xl bg-[rgba(19,25,32,0.98)] backdrop-blur-[20px] border border-white/5 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                    <div className="absolute left-1/2 top-[calc(100%+8px)] z-50 w-[740px] -translate-x-1/2 grid grid-cols-2 gap-2 rounded-2xl bg-[rgba(13,17,23,0.98)] backdrop-blur-[24px] border border-white/10 p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 translate-y-3 group-hover:translate-y-0 shadow-[0_30px_80px_rgba(0,0,0,0.65)]">
                       {servicesDropdown.map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="flex items-center gap-[0.6rem] rounded-lg p-[0.65rem] text-[0.8rem] font-medium text-white transition-all duration-300 hover:bg-gold/10 hover:text-gold"
+                          className="flex items-center gap-4 rounded-xl p-4 text-[0.88rem] font-semibold text-white/90 transition-all duration-300 hover:bg-white/[0.03] hover:text-gold group/svc border border-transparent hover:border-white/5"
                         >
-                          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gold/10 text-[0.9rem] shrink-0">
-                            {service.icon}
+                          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-[1.1rem] shrink-0 overflow-hidden border border-white/5 transition-all duration-500 group-hover/svc:scale-110 group-hover/svc:border-gold/40 group-hover/svc:shadow-[0_0_20px_rgba(245,166,35,0.15)]">
+                            <div className={cn("absolute inset-0 opacity-15 blur-xl transition-opacity duration-300 group-hover/svc:opacity-35", service.glow)} />
+                            <div className="relative z-10">
+                              {service.icon}
+                            </div>
                           </div>
-                          {service.label}
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-[0.92rem] leading-tight">{service.label}</span>
+                            <span className="text-[0.7rem] font-normal text-white/40 group-hover/svc:text-white/60 transition-colors uppercase tracking-widest">Growth Focused</span>
+                          </div>
                         </Link>
                       ))}
                     </div>

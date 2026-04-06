@@ -60,6 +60,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Increased offset to prevent overlapping in all viewports */
 }
 
 body {

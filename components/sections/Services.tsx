@@ -26,16 +26,16 @@ const services = [
         <Search size={22} strokeWidth={1.5} className="text-indigo-400 relative z-10" />
       </div>
     ),
-    title: "Search Engine Optimization (SEO)",
-    desc: "Rank higher, win more qualified organic traffic, and build long-term lead generation through on-page SEO, technical SEO and content strategy.",
-    benefits: ["Technical SEO", "Content SEO", "Keyword Research"],
+    title: "SEARCH ENGINE OPTIMIZATION (SEO)",
+    desc: "Grow your organic visibility and attract high-intent customers searching for your services.",
+    benefits: ["Keyword Research", "Technical SEO", "Content Strategy"],
     subItems: [
-      "Keyword Research",
-      "On-Page SEO (content optimization, meta tags, headers)",
-      "Technical SEO (site speed, mobile-friendliness, crawlability)",
-      "Off-Page SEO (link building)",
+      "Keyword Research & Strategy",
+      "On-Page SEO Optimization",
+      "Technical SEO",
+      "Link Building",
       "SEO Audits",
-      "Content Strategy for SEO"
+      "Content Strategy"
     ]
   },
   {
@@ -47,14 +47,13 @@ const services = [
         <Megaphone size={22} strokeWidth={1.5} className="text-amber-400 relative z-10" />
       </div>
     ),
-    title: "Search Engine Marketing (SEM) / Pay-Per-Click (PPC)",
-    desc: "Targeted Google Ads and paid search campaigns that put your brand in front of high-intent buyers fast.",
+    title: "PAY-PER-CLICK ADVERTISING (PPC)",
+    desc: "Get instant visibility and generate high-quality leads through targeted advertising.",
     benefits: ["Google Ads", "Retargeting", "Landing Pages"],
     subItems: [
-      "Google Ads Management (Search, Display, Shopping)",
-      "Bing Ads Management",
-      "Remarketing / Retargeting Campaigns",
-      "PPC Landing Page Optimization"
+      "Google Ads Management",
+      "Retargeting Campaigns",
+      "Landing Page Optimization"
     ]
   },
   {
@@ -66,15 +65,14 @@ const services = [
         <Share2 size={22} strokeWidth={1.5} className="text-pink-400 relative z-10" />
       </div>
     ),
-    title: "Social Media Marketing (SMM)",
-    desc: "Build brand authority, engage your audience and convert attention into enquiries with strategic organic and paid social campaigns.",
-    benefits: ["Meta Ads", "Creative Strategy", "Lead Forms"],
+    title: "SOCIAL MEDIA MARKETING",
+    desc: "Build trust, grow your audience, and convert followers into customers.",
+    benefits: ["Strategy", "Content Creation", "Community Management"],
     subItems: [
-      "Social Media Strategy Development",
-      "Content Creation (posts, stories, videos)",
-      "Community Management & Engagement",
-      "Paid Social Advertising (Facebook, Instagram, LinkedIn, X/Twitter, TikTok Ads)",
-      "Influencer Marketing"
+      "Social Media Strategy",
+      "Content Creation",
+      "Community Management",
+      "Paid Social Ads"
     ]
   },
   {
@@ -86,18 +84,14 @@ const services = [
         <PenTool size={22} strokeWidth={1.5} className="text-gold relative z-10" />
       </div>
     ),
-    title: "Content Marketing",
-    desc: "Compelling content that attracts, educates and converts your ideal audience.",
-    benefits: [],
+    title: "CONTENT MARKETING",
+    desc: "Attract, educate, and convert your audience through high-quality content.",
+    benefits: ["Blog Writing", "Website Copywriting", "Video Content"],
     subItems: [
-      "Blog Post Writing",
-      "Article Writing",
+      "Blog Writing",
       "Website Copywriting",
-      "Video Production (for marketing)",
-      "Infographic Design",
-      "Ebook & Whitepaper Creation",
-      "Case Study Development",
-      "Podcast Production"
+      "Video Content",
+      "Case Studies"
     ]
   },
   {
@@ -109,13 +103,12 @@ const services = [
         <Mail size={22} strokeWidth={1.5} className="text-sky-400 relative z-10" />
       </div>
     ),
-    title: "Email Marketing",
-    desc: "Nurture leads, retain customers and drive revenue through smart email campaigns.",
-    benefits: [],
+    title: "EMAIL MARKETING",
+    desc: "Turn leads into customers and customers into repeat buyers.",
+    benefits: ["Campaign Management", "Marketing Automation", "Template Design"],
     subItems: [
-      "Email List Building Strategies",
-      "Email Campaign Management (newsletters, promotions)",
-      "Marketing Automation (welcome series, abandoned cart emails)",
+      "Email Campaign Management",
+      "Marketing Automation",
       "Email Template Design"
     ]
   },
@@ -128,15 +121,13 @@ const services = [
         <Monitor size={22} strokeWidth={1.5} className="text-cyan-400 relative z-10" />
       </div>
     ),
-    title: "Website Design & Development",
-    desc: "Beautiful, fast, premium websites designed to rank, build trust and turn visitors into sales conversations.",
-    benefits: ["Speed", "UX", "Conversion Design"],
+    title: "WEBSITE DESIGN & DEVELOPMENT",
+    desc: "Build fast, modern websites designed to convert visitors into leads.",
+    benefits: ["Responsive Design", "Landing Pages", "Website Maintenance"],
     subItems: [
       "Responsive Website Design",
-      "E-commerce Website Development",
-      "Website Maintenance & Support",
-      "Landing Page Design & Optimization",
-      "UI/UX Design"
+      "Landing Pages",
+      "Website Maintenance"
     ]
   },
   {
@@ -148,105 +139,49 @@ const services = [
         <BarChart3 size={22} strokeWidth={1.5} className="text-purple-400 relative z-10" />
       </div>
     ),
-    title: "Analytics & Reporting",
-    desc: "Turn raw data into actionable insights that fuel smarter marketing decisions.",
-    benefits: [],
+    title: "ANALYTICS & REPORTING",
+    desc: "Make data-driven decisions and improve performance continuously.",
+    benefits: ["Analytics Setup", "Performance Analysis", "Reporting Dashboards"],
     subItems: [
-      "Google Analytics Setup & Configuration",
-      "Data Analysis & Insights",
-      "Custom Dashboard Creation",
-      "Regular Performance Reporting"
-    ]
-  },
-  {
-    id: "service-cro",
-    num: "08",
-    icon: (
-      <div className="relative flex items-center justify-center">
-        <div className="absolute inset-0 scale-150 rounded-full bg-rose-500/10 blur-lg group-hover:bg-rose-500/20 transition-all duration-500" />
-        <Target size={22} strokeWidth={1.5} className="text-rose-400 relative z-10" />
-      </div>
-    ),
-    title: "Conversion Rate Optimization (CRO)",
-    desc: "Turn more of your existing traffic into leads and customers through systematic testing.",
-    benefits: [],
-    subItems: [
-      "A/B Testing (website elements, landing pages)",
-      "User Experience (UX) Analysis",
-      "Heat Mapping & Session Recording Analysis"
-    ]
-  },
-  {
-    id: "service-orm",
-    num: "09",
-    icon: (
-      <div className="relative flex items-center justify-center">
-        <div className="absolute inset-0 scale-150 rounded-full bg-emerald-500/10 blur-lg group-hover:bg-emerald-500/20 transition-all duration-500" />
-        <ShieldCheck size={22} strokeWidth={1.5} className="text-emerald-400 relative z-10" />
-      </div>
-    ),
-    title: "Online Reputation Management (ORM)",
-    desc: "Protect and strengthen your brand's image across the web.",
-    benefits: [],
-    subItems: [
-      "Monitoring Brand Mentions",
-      "Review Management (Google My Business, Yelp, etc.)",
-      "Responding to Feedback"
-    ]
-  },
-  {
-    id: "service-video",
-    num: "10",
-    icon: (
-      <div className="relative flex items-center justify-center">
-        <div className="absolute inset-0 scale-150 rounded-full bg-orange-500/10 blur-lg group-hover:bg-orange-500/20 transition-all duration-500" />
-        <Video size={22} strokeWidth={1.5} className="text-orange-400 relative z-10" />
-      </div>
-    ),
-    title: "Video Marketing",
-    desc: "High-impact video content that tells your brand story and drives engagement everywhere.",
-    benefits: [],
-    subItems: [
-      "Video Content Strategy",
-      "Video Production & Editing",
-      "YouTube SEO",
-      "Video Ad Campaigns"
-    ]
-  },
-  {
-    id: "service-affiliate",
-    num: "11",
-    icon: (
-      <div className="relative flex items-center justify-center">
-        <div className="absolute inset-0 scale-150 rounded-full bg-teal-500/10 blur-lg group-hover:bg-teal-500/20 transition-all duration-500" />
-        <Handshake size={22} strokeWidth={1.5} className="text-teal-400 relative z-10" />
-      </div>
-    ),
-    title: "Affiliate Marketing",
-    desc: "Build and manage a performance-based partner network that drives sales on autopilot.",
-    benefits: [],
-    subItems: [
-      "Program Setup",
-      "Affiliate Recruitment & Management"
+      "Analytics Setup",
+      "Performance Analysis",
+      "Reporting Dashboards"
     ]
   },
   {
     id: "service-automation",
-    num: "12",
+    num: "08",
     icon: (
       <div className="relative flex items-center justify-center">
         <div className="absolute inset-0 scale-150 rounded-full bg-slate-500/10 blur-lg group-hover:bg-slate-500/20 transition-all duration-500" />
         <Cpu size={22} strokeWidth={1.5} className="text-slate-400 relative z-10" />
       </div>
     ),
-    title: "Marketing Automation",
-    desc: "Streamline follow-up, nurture leads and scale conversion with smart marketing automation across your funnel.",
-    benefits: ["Email Automation", "CRM Workflows", "Lead Nurture"],
+    title: "MARKETING AUTOMATION",
+    desc: "Scale your marketing with smart systems and workflows.",
+    benefits: ["Automated Workflows", "CRM Integration", "Lead Scoring"],
     subItems: [
-      "Automated Workflows (Email, CRM, Social)",
-      "Lead Scoring & Nurturing Sequences",
-      "CRM Integration & Setup",
-      "Cross-Channel Campaign Automation"
+      "Automated Workflows",
+      "CRM Integration",
+      "Lead Scoring"
+    ]
+  },
+  {
+    id: "service-video",
+    num: "09",
+    icon: (
+      <div className="relative flex items-center justify-center">
+        <div className="absolute inset-0 scale-150 rounded-full bg-orange-500/10 blur-lg group-hover:bg-orange-500/20 transition-all duration-500" />
+        <Video size={22} strokeWidth={1.5} className="text-orange-400 relative z-10" />
+      </div>
+    ),
+    title: "VIDEO MARKETING",
+    desc: "Capture attention and communicate your message effectively through video.",
+    benefits: ["Video Strategy", "Video Production", "Video Advertising"],
+    subItems: [
+      "Video Strategy",
+      "Video Production",
+      "Video Advertising"
     ]
   }
 ];

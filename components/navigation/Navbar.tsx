@@ -39,7 +39,7 @@ const servicesDropdown = [
     href: "#service-ppc", 
     icon: <Megaphone className="text-amber-400 group-hover:text-amber-300 transition-colors" size={16} strokeWidth={2} />, 
     glow: "bg-amber-500/20",
-    label: "PPC / Google Ads" 
+    label: "PPC Advertising" 
   },
   { 
     href: "#service-smm", 
@@ -72,34 +72,16 @@ const servicesDropdown = [
     label: "Analytics & Reporting" 
   },
   { 
-    href: "#service-cro", 
-    icon: <Target className="text-rose-400 group-hover:text-rose-300 transition-colors" size={16} strokeWidth={2} />, 
-    glow: "bg-rose-500/20",
-    label: "CRO" 
-  },
-  { 
-    href: "#service-orm", 
-    icon: <ShieldCheck className="text-emerald-400 group-hover:text-emerald-300 transition-colors" size={16} strokeWidth={2} />, 
-    glow: "bg-emerald-500/20",
-    label: "Reputation Management" 
+    href: "#service-automation", 
+    icon: <Cpu className="text-slate-400 group-hover:text-slate-300 transition-colors" size={16} strokeWidth={2} />, 
+    glow: "bg-slate-500/20",
+    label: "Marketing Automation" 
   },
   { 
     href: "#service-video", 
     icon: <Video className="text-orange-400 group-hover:text-orange-300 transition-colors" size={16} strokeWidth={2} />, 
     glow: "bg-orange-500/20",
     label: "Video Marketing" 
-  },
-  { 
-    href: "#service-affiliate", 
-    icon: <Handshake className="text-teal-400 group-hover:text-teal-300 transition-colors" size={16} strokeWidth={2} />, 
-    glow: "bg-teal-500/20",
-    label: "Affiliate Marketing" 
-  },
-  { 
-    href: "#service-automation", 
-    icon: <Cpu className="text-slate-400 group-hover:text-slate-300 transition-colors" size={16} strokeWidth={2} />, 
-    glow: "bg-slate-500/20",
-    label: "Marketing Automation" 
   },
 ];
 
